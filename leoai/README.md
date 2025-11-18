@@ -98,8 +98,10 @@ leoai/
 └── package.json
 ```
 
-🙋 Built By
+🙋 Built By: 
+[Kwadwo Ohene Darko](https://www.linkedin.com/in/dr-kwadwo-ohene-darko)
 
-Kwadwo Ohene Darko
+[Connect with me](https://www.linkedin.com/in/dr-kwadwo-ohene-darko)
+
 
 This project was created for the Anthropic x UofT AI Hackathon.
