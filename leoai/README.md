@@ -77,3 +77,29 @@ ANTHROPIC_API_KEY=sk-ant-your-private-key-here
 ```bash
 npm run dev
 ```
+The application will be accessible at http://localhost:3000 by default if not already being used.
+
+
+## 🗺️ Project Structure
+
+The project uses a clean, flat structure compliant with the latest Next.js App Router conventions:
+
+```text
+leoai/
+├── app/                  # App Router Core
+│   ├── api/              # Backend API Routes
+│   │   └── assess/       # Contains /api/assess/route.ts
+│   ├── audit/            # The primary functional page
+│   ├── methodology/      # The secondary informational page
+│   ├── page.tsx          # Landing Page (Marketing)
+│   └── layout.tsx        # Navigation and structure
+├── data/                 # Static Knowledge Base/Assets
+│   └── frameworks.ts     # Framework definitions, etc.
+└── package.json
+```
+
+🙋 Built By
+
+Kwadwo Ohene Darko
+
+This project was created for the Anthropic x UofT AI Hackathon.
