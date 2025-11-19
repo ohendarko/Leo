@@ -1,6 +1,8 @@
+'use client'
 import { useState, useEffect, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
 import heroStatue from "@/assets/hero-statue.jpg";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +22,7 @@ export const Navigation = () => {
   }>>([]);
   const particleIdRef = useRef(0);
   const lastParticleTime = useRef(0);
-  const location = useLocation();
+  const location = useRouter()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -151,7 +153,7 @@ export const Navigation = () => {
           }`}
         >
           <div className="container mx-auto px-6 py-6 flex justify-between items-center">
-            <Link to="/" className="flex items-center gap-3">
+            <Link href="/" className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
                 <span className="text-2xl">🦁</span>
               </div>
@@ -190,7 +192,7 @@ export const Navigation = () => {
 
           {/* Menu Header */}
           <div className={`absolute top-0 left-0 right-0 px-6 py-6 md:px-12 md:py-8 flex justify-between items-center ${isAnimatingOut ? 'animate-fade-out' : 'animate-fade-in'}`} style={{ animationDelay: isAnimatingOut ? '0ms' : '29ms' }}>
-            <Link to="/" className="flex items-center gap-3">
+            <Link href="/" className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
                 <span className="text-2xl">🦁</span>
               </div>
@@ -260,7 +262,7 @@ export const Navigation = () => {
               <div
                 className="w-full h-full transition-transform duration-300 ease-out will-change-transform"
                 style={{
-                  backgroundImage: `url(${heroStatue})`,
+                  backgroundImage: `url(${heroStatue.src})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   transform: `translate(${mousePosition.x * -20}px, ${mousePosition.y * -20}px) rotateY(${mousePosition.x * 3}deg) rotateX(${mousePosition.y * -2}deg) scale(1.1)`,
@@ -278,7 +280,7 @@ export const Navigation = () => {
                 {navLinks.map((link, index) => (
                   <Link
                     key={link.to}
-                    to={link.to}
+                    href={link.to}
                   className={`text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gold spotlight-glow-dark transition-all duration-300 tracking-wide ${isAnimatingOut ? 'animate-slide-out-to-right-fast' : 'animate-slide-in-from-right-fast'}`}
                   style={{ animationDelay: isAnimatingOut ? '0ms' : `${84 + index * 42}ms` }}
                   >

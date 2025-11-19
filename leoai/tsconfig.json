@@ -12,6 +12,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
+    "types": ["@react-three/fiber"],
     "incremental": true,
     "plugins": [
       {
@@ -27,6 +28,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
+    "three-jsx.d.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
