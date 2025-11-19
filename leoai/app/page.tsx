@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Navigation } from "@/components/Navigation";
 import { useParallax } from "@/hooks/useParallax";
-import asclepiusMarble from "@/assets/asclepius-marble.jpg";
+import asclepiusMarble from "@/assets/asclepius-marbles.jpg";
 import { useRouter } from "next/navigation";
 
 const Landing = () => {
