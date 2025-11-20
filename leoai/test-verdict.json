@@ -1,0 +1,49 @@
+{
+  "pitch": {
+    "startupName": "CardioWatch AI",
+    "tagline": "AI-powered cardiac monitoring for heart failure patients",
+    "problemStatement": "Heart failure readmissions cost Medicare $17B annually. 30-day readmission rates are 25%, often due to lack of early detection of patient deterioration.",
+    "solution": "Wearable device with AI algorithms that analyze ECG, heart rate variability, and activity patterns to predict deterioration 48 hours before clinical event.",
+    "targetMarket": "Post-discharge Medicare heart failure patients in the United States, initially focusing on ACO partnerships.",
+    "competitiveAdvantage": "Proprietary ECG interpretation algorithm with 92% accuracy, validated in pilot with 150 patients across 3 hospital systems.",
+    "currentStage": "mvp",
+    "fundingGoal": "$2M seed round for FDA 510(k) submission and multi-site clinical trial"
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Your target users are Medicare heart failure patients, typically 65+ with multiple comorbidities and often limited digital literacy - what specific user research have you conducted on device adoption barriers in this population, and what is your concrete strategy for overcoming the 40-60% non-adherence rates typical in remote monitoring for elderly patients?",
+      "framework": "nasss",
+      "rationale": "Adopter system complexity with vulnerable, low-tech-literacy users is often the biggest predictor of digital health failure.",
+      "category": "Adoption Risk"
+    },
+    {
+      "id": "q2",
+      "question": "Your 92% accuracy claim from 150 patients across 3 hospitals - what was your primary endpoint, control group, and statistical power calculation, and how do you plan to demonstrate clinical utility (actual reduction in readmissions, not just prediction accuracy) required for FDA 510(k) approval and payer confidence?",
+      "framework": "play-to-win",
+      "rationale": "Prediction accuracy without proven clinical outcomes is insufficient for regulatory approval and market adoption.",
+      "category": "Competitive Advantage"
+    },
+    {
+      "id": "q3",
+      "question": "ACOs need clear ROI to justify new technology spend - what specific CPT codes will enable reimbursement, what is your per-patient-per-month pricing model, and how have you validated that ACOs have budget authority and willingness to pay this amount given their existing remote monitoring contracts?",
+      "framework": "business-model",
+      "rationale": "Without a concrete reimbursement pathway and validated pricing, the business model remains unproven regardless of clinical efficacy.",
+      "category": "Revenue Model"
+    }
+  ],
+  "answers": [
+    {
+      "questionId": "q1",
+      "answer": "We conducted user interviews with 25 heart failure patients and 10 caregivers. We found that 70% were open to wearables if setup was handled by nurses. Our strategy includes: (1) White-glove onboarding with home visits, (2) 24/7 phone support with human escalation, (3) Simplified device with one-button operation, (4) Caregiver app for family monitoring. In our pilot, 85% of patients wore the device 6+ days/week after the first month."
+    },
+    {
+      "questionId": "q2",
+      "answer": "Our pilot's primary endpoint was 48-hour advance prediction of clinical deterioration events (defined as ER visit or readmission). We had no formal control group—just compared predictions to actual outcomes. We acknowledge this isn't sufficient for FDA. Our plan: (1) $1.5M funded RCT with 500 patients over 18 months, randomized to standard care vs. CardioWatch, measuring 30-day readmission reduction. (2) We've identified a 510(k) predicate device (Zephyr BioPatch). (3) Target FDA submission in Q4 2026."
+    },
+    {
+      "questionId": "q3",
+      "answer": "We're targeting CPT codes 99457/99458 (Remote Physiologic Monitoring), which reimburse ~$50-60 per patient per month. Our pricing is $75 PMPM to ACOs, with $15-25 margin after device costs. We've had preliminary discussions with 2 ACOs representing 5,000 HF patients—they confirmed RPM budget and interest pending clinical validation. Our concern: CMS recently proposed CPT code changes that could impact reimbursement rates by 20-30% in 2026."
+    }
+  ]
+}
