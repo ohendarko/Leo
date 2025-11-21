@@ -37,7 +37,7 @@ const Audit = () => {
     const controller = new AbortController();
     setAbortController(controller);
     setIsLoading(true);
-    setLoadingMessage('Leo is analyzing your pitch through 4 strategic frameworks...');
+    setLoadingMessage('Leo is analyzing your pitch through 4 strategic frameworks. Please Wait...');
     setPitch(pitchData);
 
     try {
@@ -75,7 +75,7 @@ const Audit = () => {
     const controller = new AbortController();
     setAbortController(controller);
     setIsLoading(true);
-    setLoadingMessage('Leo is generating your comprehensive verdict with survival score...');
+    setLoadingMessage('Leo is generating your comprehensive verdict with survival score. Please wait...');
 
     try {
       const response = await generateVerdict(
@@ -151,7 +151,7 @@ const Audit = () => {
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gold font-cinzel">
-              The Leo Validation
+              The Leo Assessment
             </h1>
             <p className="text-xl text-warm-beige font-medium">
               Rigorous assessment combining NASSS, Play-to-Win, Business Model, and Regulatory frameworks
