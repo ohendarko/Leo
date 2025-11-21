@@ -32,32 +32,37 @@ const About = () => {
               About Leo
             </h1>
             <p className="text-xl text-warm-beige">
-              Strategic validation for digital health innovators
+              Strategic assessment for digital health innovators
             </p>
           </div>
 
-          <Card className="p-12 bg-card/95 backdrop-blur-sm border-gold/30 mb-12 animate-fade-in">
+          <Card className="p-12 bg-light-cream/80 backdrop-blur-sm border-gold/30 mb-12 animate-fade-in">
             <div className="flex flex-col items-center text-center mb-8">
-              <div className="w-32 h-32 rounded-full bg-primary/20 flex items-center justify-center mb-6 border-2 border-gold/50">
-                <span className="text-6xl">🦁</span>
+              <div className="w-32 h-32 rounded-full bg-primary/80 flex items-center justify-center mb-6 border-2 border-gold/50">
+              <Image
+                src="/logo.PNG"
+                width={100}
+                height={100}
+                alt="leo-logo"
+              />
               </div>
-              <h2 className="text-3xl font-bold mb-4 text-gold font-cinzel">The Vision</h2>
+              <h2 className="text-3xl font-bold mb-4 text-yellow-700 font-cinzel">The Vision</h2>
             </div>
 
             <div className="prose prose-invert max-w-none space-y-6 text-lg">
-              <p className="text-foreground">
+              <p className="text-gray-900">
                 Leo was born from a simple observation: most digital health startups fail not because 
                 their technology is inadequate, but because they haven't rigorously tested their strategy 
                 against the complex realities of healthcare systems.
               </p>
 
-              <p className="text-foreground">
+              <p className="text-gray-900">
                 Named after the lion—a symbol of courage and strategic thinking—Leo combines battle-tested 
                 frameworks from implementation science (NASSS) and business strategy (Play-to-Win) to help 
                 founders validate their ideas before committing millions in resources.
               </p>
 
-              <p className="text-foreground">
+              <p className="text-gray-900">
                 Healthcare innovation requires more than good intentions. It demands strategic clarity, 
                 stakeholder alignment, and a deep understanding of organizational dynamics. Leo provides 
                 that critical reality check.
@@ -65,8 +70,8 @@ const About = () => {
             </div>
           </Card>
 
-          <Card className="p-12 bg-card/95 backdrop-blur-sm border-gold/30 animate-fade-in">
-            <h2 className="text-3xl font-bold mb-8 text-center text-gold font-cinzel">Our Commitment</h2>
+          <Card className="p-12 bg-light-cream/80 backdrop-blur-sm border-gold/30 animate-fade-in">
+            <h2 className="text-3xl font-bold mb-8 text-center text-gray-900 font-cinzel">Our Commitment</h2>
             
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="text-center">
@@ -74,7 +79,7 @@ const About = () => {
                   <span className="text-3xl">🎯</span>
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-primary font-cinzel">Strategic Rigor</h3>
-                <p className="text-warm-beige">
+                <p className="text-gray-700">
                   Evidence-based frameworks, not guesswork
                 </p>
               </div>
@@ -83,8 +88,8 @@ const About = () => {
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-secondary/20 flex items-center justify-center border border-secondary/50">
                   <span className="text-3xl">🏥</span>
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-secondary font-cinzel">Healthcare Focus</h3>
-                <p className="text-warm-beige">
+                <h3 className="text-xl font-bold mb-2 text-green-700 font-cinzel">Healthcare Focus</h3>
+                <p className="text-gray-700">
                   Deep understanding of health system complexity
                 </p>
               </div>
@@ -93,15 +98,15 @@ const About = () => {
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-accent/20 flex items-center justify-center border border-accent/50">
                   <span className="text-3xl">💡</span>
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-accent font-cinzel">Actionable Insights</h3>
-                <p className="text-warm-beige">
+                <h3 className="text-xl font-bold mb-2 text-orange-800 font-cinzel">Actionable Insights</h3>
+                <p className="text-gray-700">
                   Clear recommendations, not vague platitudes
                 </p>
               </div>
             </div>
 
             <div className="border-t border-border pt-8">
-              <h3 className="text-2xl font-bold mb-6 text-center text-gold font-cinzel">Get in Touch</h3>
+              <h3 className="text-2xl font-bold mb-6 text-center text-yellow-800 font-cinzel">Get in Touch</h3>
               <div className="flex justify-center gap-4">
                 <Button className="bg-primary hover:bg-primary/80 border border-gold/50">
                   <Mail className="mr-2 h-5 w-5" />
