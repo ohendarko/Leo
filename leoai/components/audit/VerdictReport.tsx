@@ -212,8 +212,8 @@ export function VerdictReport({ verdict, onReset }: VerdictReportProps) {
           </Button>
 
           {showThinking && (
-            <div className="mt-4 p-4 bg-muted/30 border border-primary/20 rounded-lg max-h-96 overflow-y-auto">
-              <p className="text-sm text-muted-foreground whitespace-pre-wrap">
+            <div className="mt-4 p-6 bg-slate-900/95 border border-slate-600/50 rounded-lg max-h-96 overflow-y-auto shadow-inner">
+              <p className="text-sm text-slate-100 leading-relaxed whitespace-pre-wrap">
                 {verdict.thinkingProcess}
               </p>
             </div>
