@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import heroStatue from "@/assets/hero-statue.jpg";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -154,8 +155,9 @@ export const Navigation = () => {
         >
           <div className="container mx-auto px-6 py-6 flex justify-between items-center">
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                <span className="text-2xl">🦁</span>
+              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+                <Image src="/logo.PNG" width={45} height={45} alt="leo-logo" />
+
               </div>
               <span className="text-xl font-bold text-white">Leo</span>
             </Link>
