@@ -60,35 +60,40 @@ const Methodology = () => {
   ];
 
   return (
-    <div className="min-h-screen relative bg-background text-foreground">
+    <div className="min-h-screen relative text-foreground">
       <Navigation />
       
-      {/* Spartan army background */}
+      {/* Spartan marble statues background */}
       <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute inset-0 bg-black/70" />
-        <Image src={spartanArmyImage} alt="Spartan Army" className="w-full h-full object-cover opacity-50"/>
+        <div className="absolute inset-0 bg-white/30" />
+        <Image
+          src={spartanArmyImage}
+          alt="Spartan Warriors"
+          className="w-full h-full object-cover opacity-70"
+        />
         {/* <img
           src={spartanArmyImage}
-          alt="Spartan Army"
-          className="w-full h-full object-cover opacity-50"
+          alt="Spartan Warriors"
+          className="w-full h-full object-cover opacity-70"
         /> */}
       </div>
       
       <div className="relative z-10 container mx-auto px-6 pt-32 pb-20">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gold font-cinzel">
-            Our Methodology
-          </h1>
-          <p className="text-xl text-warm-beige max-w-3xl mx-auto">
-            We combine two powerful strategic frameworks to assess your digital health innovation
-          </p>
-        </div>
+        <div className="rounded-3xl bg-light-cream/90 backdrop-blur-xl shadow-2xl px-6 py-10 md:px-10 md:py-12">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-900 font-cinzel drop-shadow-lg">
+              Our Methodology
+            </h1>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto drop-shadow-sm">
+              We combine two powerful strategic frameworks to assess your digital health innovation
+            </p>
+          </div>
 
-        <div className="max-w-6xl mx-auto space-y-20">
+          <div className="max-w-6xl mx-auto space-y-20">
           <section className="animate-fade-in">
             <div className="mb-12">
-              <h2 className="text-4xl font-bold mb-4 text-primary font-cinzel">NASSS Framework</h2>
-              <p className="text-xl text-warm-beige">
+              <h2 className="text-4xl font-bold mb-4 text-primary font-cinzel drop-shadow-md">NASSS Framework</h2>
+              <p className="text-xl text-gray-700">
                 The Non-adoption, Abandonment, Scale-up, Spread, and Sustainability framework 
                 helps predict and address implementation challenges.
               </p>
@@ -98,7 +103,7 @@ const Methodology = () => {
               {nassDomains.map((domain, index) => (
                 <Card 
                   key={index}
-                  className="p-6 bg-card/90 backdrop-blur-sm border-primary/30 hover:border-primary transition-all duration-300 hover:scale-105"
+                  className="p-6 bg-white/90 border-primary/20 shadow-lg hover:border-primary hover:shadow-xl transition-all duration-300 hover:scale-105"
                   style={{
                     animationDelay: `${index * 100}ms`,
                   }}
@@ -106,8 +111,8 @@ const Methodology = () => {
                   <div className="flex items-start gap-4">
                     <CheckCircle2 className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="text-xl font-bold mb-2 text-foreground">{domain.title}</h3>
-                      <p className="text-warm-beige">{domain.description}</p>
+                      <h3 className="text-xl font-bold mb-2 text-charcoal">{domain.title}</h3>
+                      <p className="text-charcoal/80">{domain.description}</p>
                     </div>
                   </div>
                 </Card>
@@ -117,8 +122,8 @@ const Methodology = () => {
 
           <section className="animate-fade-in">
             <div className="mb-12">
-              <h2 className="text-4xl font-bold mb-4 text-secondary font-cinzel">Play-to-Win Framework</h2>
-              <p className="text-xl text-warm-beige">
+              <h2 className="text-4xl font-bold mb-4 text-secondary font-cinzel drop-shadow-md">Play-to-Win Framework</h2>
+              <p className="text-xl text-gray-700">
                 Roger Martin's strategic framework for making clear, cascading strategic choices.
               </p>
             </div>
@@ -127,7 +132,7 @@ const Methodology = () => {
               {playToWinChoices.map((choice, index) => (
                 <Card 
                   key={index}
-                  className="p-6 bg-card/90 backdrop-blur-sm border-secondary/30 hover:border-secondary transition-all duration-300 hover:scale-105"
+                  className="p-6 bg-white/90 border-secondary/20 shadow-lg hover:border-secondary hover:shadow-xl transition-all duration-300 hover:scale-105"
                   style={{
                     animationDelay: `${index * 100}ms`,
                   }}
@@ -135,8 +140,8 @@ const Methodology = () => {
                   <div className="flex items-start gap-4">
                     <CheckCircle2 className="h-6 w-6 text-secondary mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="text-xl font-bold mb-2 text-foreground">{choice.title}</h3>
-                      <p className="text-warm-beige">{choice.description}</p>
+                      <h3 className="text-xl font-bold mb-2 text-charcoal">{choice.title}</h3>
+                      <p className="text-charcoal/80">{choice.description}</p>
                     </div>
                   </div>
                 </Card>
@@ -145,14 +150,15 @@ const Methodology = () => {
           </section>
 
           <section className="text-center py-12">
-            <Card className="p-12 bg-gradient-to-br from-card to-muted border-primary">
-              <h3 className="text-3xl font-bold mb-4 text-foreground">The Leo Advantage</h3>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <Card className="p-12 bg-gradient-to-br from-warm-cream to-light-cream border-primary shadow-xl">
+              <h3 className="text-3xl font-bold mb-4 text-charcoal">The Leo Advantage</h3>
+              <p className="text-xl text-charcoal/80 max-w-2xl mx-auto">
                 By synthesizing insights from both frameworks, Leo provides a comprehensive 
                 assessment that identifies critical risks and strategic opportunities before you commit resources.
               </p>
             </Card>
           </section>
+          </div>
         </div>
       </div>
     </div>

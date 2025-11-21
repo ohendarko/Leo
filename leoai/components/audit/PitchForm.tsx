@@ -38,11 +38,11 @@ export function PitchForm({ onSubmit, isLoading }: PitchFormProps) {
   };
 
   return (
-    <Card className="p-8 bg-card/95 backdrop-blur-sm border-primary/30 shadow-2xl animate-fade-in">
-      <h2 className="text-3xl font-bold mb-6 text-center text-gold font-cinzel">
+    <Card className="p-8 bg-light-cream/80 shadow-2xl backdrop-blur-sm border-primary/30 animate-fade-in">
+      <h2 className="text-3xl font-bold mb-6 text-center text-gray-900 font-cinzel">
         Step 1: Your Pitch
       </h2>
-      <p className="text-warm-beige mb-8 text-center">
+      <p className="text-gray-900 mb-8 text-center">
         Provide detailed information about your digital health startup. 
         This will be analyzed through four strategic frameworks.
       </p>
@@ -50,7 +50,7 @@ export function PitchForm({ onSubmit, isLoading }: PitchFormProps) {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Startup Name */}
         <div className="space-y-2">
-          <Label htmlFor="startupName" className="text-foreground font-semibold">
+          <Label htmlFor="startupName" className="text-gray-900 font-semibold">
             Startup Name *
           </Label>
           <Input
@@ -65,7 +65,7 @@ export function PitchForm({ onSubmit, isLoading }: PitchFormProps) {
 
         {/* Tagline */}
         <div className="space-y-2">
-          <Label htmlFor="tagline" className="text-foreground font-semibold">
+          <Label htmlFor="tagline" className="text-gray-900 font-semibold">
             Tagline *
           </Label>
           <Input
@@ -80,7 +80,7 @@ export function PitchForm({ onSubmit, isLoading }: PitchFormProps) {
 
         {/* Problem Statement */}
         <div className="space-y-2">
-          <Label htmlFor="problemStatement" className="text-foreground font-semibold">
+          <Label htmlFor="problemStatement" className="text-gray-900 font-semibold">
             Problem Statement *
           </Label>
           <Textarea
@@ -95,7 +95,7 @@ export function PitchForm({ onSubmit, isLoading }: PitchFormProps) {
 
         {/* Solution */}
         <div className="space-y-2">
-          <Label htmlFor="solution" className="text-foreground font-semibold">
+          <Label htmlFor="solution" className="text-gray-900 font-semibold">
             Solution *
           </Label>
           <Textarea
@@ -110,7 +110,7 @@ export function PitchForm({ onSubmit, isLoading }: PitchFormProps) {
 
         {/* Target Market */}
         <div className="space-y-2">
-          <Label htmlFor="targetMarket" className="text-foreground font-semibold">
+          <Label htmlFor="targetMarket" className="text-gray-900 font-semibold">
             Target Market *
           </Label>
           <Textarea
@@ -125,7 +125,7 @@ export function PitchForm({ onSubmit, isLoading }: PitchFormProps) {
 
         {/* Competitive Advantage */}
         <div className="space-y-2">
-          <Label htmlFor="competitiveAdvantage" className="text-foreground font-semibold">
+          <Label htmlFor="competitiveAdvantage" className="text-gray-900 font-semibold">
             Competitive Advantage *
           </Label>
           <Textarea
@@ -140,7 +140,7 @@ export function PitchForm({ onSubmit, isLoading }: PitchFormProps) {
 
         {/* Current Stage */}
         <div className="space-y-2">
-          <Label htmlFor="currentStage" className="text-foreground font-semibold">
+          <Label htmlFor="currentStage" className="text-gray-900 font-semibold">
             Current Stage *
           </Label>
           <Select
@@ -164,7 +164,7 @@ export function PitchForm({ onSubmit, isLoading }: PitchFormProps) {
 
         {/* Funding Goal (Optional) */}
         <div className="space-y-2">
-          <Label htmlFor="fundingGoal" className="text-foreground font-semibold">
+          <Label htmlFor="fundingGoal" className="text-gray-900 font-semibold">
             Funding Goal (Optional)
           </Label>
           <Input
@@ -178,7 +178,7 @@ export function PitchForm({ onSubmit, isLoading }: PitchFormProps) {
 
         {/* Additional Context (Optional) */}
         <div className="space-y-2">
-          <Label htmlFor="additionalContext" className="text-foreground font-semibold">
+          <Label htmlFor="additionalContext" className="text-gray-900 font-semibold">
             Additional Context (Optional)
           </Label>
           <Textarea
@@ -195,7 +195,7 @@ export function PitchForm({ onSubmit, isLoading }: PitchFormProps) {
             type="submit"
             disabled={isLoading}
             size="lg"
-            className="min-w-[200px] bg-primary hover:bg-primary/80 text-foreground border border-gold/50"
+            className="min-w-[200px] bg-primary hover:bg-primary/80 text-gray-900 border border-gold/50"
           >
             {isLoading ? 'Analyzing...' : 'Submit Pitch'}
           </Button>

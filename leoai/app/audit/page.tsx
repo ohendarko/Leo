@@ -161,21 +161,21 @@ const Audit = () => {
             <div className="mt-8 flex justify-center gap-4">
               <div className={`px-4 py-2 rounded-lg border ${
                 stage === 'pitch' 
-                  ? 'bg-primary/20 border-primary text-primary' 
+                  ? 'bg-light-cream/80 border-primary text-gray-800' 
                   : 'bg-muted/20 border-muted text-muted-foreground'
               }`}>
                 1. Pitch
               </div>
               <div className={`px-4 py-2 rounded-lg border ${
                 stage === 'interrogation' 
-                  ? 'bg-primary/20 border-primary text-primary' 
+                  ? 'bg-light-cream/80 border-primary text-primary' 
                   : 'bg-muted/20 border-muted text-muted-foreground'
               }`}>
                 2. Interrogation
               </div>
               <div className={`px-4 py-2 rounded-lg border ${
                 stage === 'verdict' 
-                  ? 'bg-primary/20 border-primary text-primary' 
+                  ? 'bg-light-cream/80 border-primary text-primary' 
                   : 'bg-muted/20 border-muted text-muted-foreground'
               }`}>
                 3. Verdict
