@@ -18,10 +18,10 @@ interface InterrogationStageProps {
 }
 
 const frameworkColors = {
-  nasss: 'bg-blue-500/20 text-blue-300 border-blue-500/50',
-  'play-to-win': 'bg-purple-500/20 text-purple-300 border-purple-500/50',
-  'business-model': 'bg-green-500/20 text-green-300 border-green-500/50',
-  regulatory: 'bg-orange-500/20 text-orange-300 border-orange-500/50',
+  nasss: 'bg-blue-300/20 text-blue-900 border-blue-500/50',
+  'play-to-win': 'bg-purple-300/20 text-purple-900 border-purple-500/50',
+  'business-model': 'bg-green-300/20 text-green-900 border-green-500/50',
+  regulatory: 'bg-orange-300/20 text-orange-900 border-orange-500/50',
 };
 
 export function InterrogationStage({
@@ -45,14 +45,14 @@ export function InterrogationStage({
   const allAnswered = questions.every((q) => answers[q.id]?.trim());
 
   return (
-    <Card className="p-8 bg-card/95 backdrop-blur-sm border-primary/30 shadow-2xl animate-fade-in">
-      <h2 className="text-3xl font-bold mb-6 text-center text-gold font-cinzel">
+    <Card className="p-8 bg-light-cream/80 backdrop-blur-sm border-primary/30 shadow-2xl animate-fade-in">
+      <h2 className="text-3xl font-bold mb-6 text-center text-gray-900 font-cinzel">
         Step 2: Strategic Interrogation
       </h2>
 
       {/* Analysis Snippet */}
-      <div className="mb-8 p-4 bg-muted/50 border border-primary/30 rounded-lg">
-        <p className="text-warm-beige italic text-center">{analysisSnippet}</p>
+      <div className="mb-8 p-4 bg-muted/80 border border-primary/30 rounded-lg">
+        <p className="text-white italic text-center">{analysisSnippet}</p>
       </div>
 
       {/* Extended Thinking Toggle */}
@@ -62,7 +62,7 @@ export function InterrogationStage({
             variant="outline"
             size="sm"
             onClick={() => setShowThinking(!showThinking)}
-            className="w-full border-primary/40 text-primary hover:bg-primary/10"
+            className="w-full border-primary/40 text-gray-100 hover:bg-primary/10"
           >
             <Lightbulb className="mr-2 h-4 w-4" />
             {showThinking ? 'Hide' : 'Show'} Leo's Reasoning Process
@@ -74,8 +74,8 @@ export function InterrogationStage({
           </Button>
 
           {showThinking && (
-            <div className="mt-4 p-4 bg-muted/30 border border-primary/20 rounded-lg max-h-96 overflow-y-auto">
-              <p className="text-sm text-muted-foreground whitespace-pre-wrap">
+            <div className="mt-4 p-4 bg-muted/70 border border-primary/20 rounded-lg max-h-96 overflow-y-auto">
+              <p className="text-sm text-gray-100 whitespace-pre-wrap">
                 {thinkingProcess}
               </p>
             </div>
@@ -88,7 +88,7 @@ export function InterrogationStage({
         {questions.map((question, index) => (
           <div key={question.id} className="space-y-3">
             <div className="flex items-start gap-3">
-              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 border border-primary flex items-center justify-center font-bold text-foreground">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 border border-primary flex items-center justify-center font-bold text-gray-900">
                 {index + 1}
               </div>
               <div className="flex-1 space-y-2">
@@ -99,14 +99,14 @@ export function InterrogationStage({
                   >
                     {question.framework.toUpperCase()}
                   </Badge>
-                  <Badge variant="outline" className="border-primary/40 text-muted-foreground">
+                  <Badge variant="outline" className="border-gray-700/40 text-gray-900">
                     {question.category}
                   </Badge>
                 </div>
-                <p className="text-lg text-foreground leading-relaxed">
+                <p className="text-lg text-gray-900 leading-relaxed">
                   {question.question}
                 </p>
-                <p className="text-sm text-muted-foreground italic">
+                <p className="text-sm text-gray-700 italic">
                   Why this matters: {question.rationale}
                 </p>
               </div>
@@ -118,7 +118,7 @@ export function InterrogationStage({
               onChange={(e) =>
                 setAnswers((prev) => ({ ...prev, [question.id]: e.target.value }))
               }
-              className="min-h-[120px] bg-muted/80 text-foreground border-primary/40 focus:border-primary placeholder:text-muted-foreground"
+              className="min-h-[120px] bg-muted/80 text-gray-100 border-primary/40 focus:border-primary placeholder:text-muted-foreground"
             />
           </div>
         ))}

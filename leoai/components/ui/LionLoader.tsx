@@ -2,6 +2,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 interface LionLoaderProps {
   message?: string;
@@ -52,7 +53,12 @@ export function LionLoader({ message = 'Leo is thinking...', onCancel }: LionLoa
               ease: 'easeInOut',
             }}
           >
-            🦁
+            <Image
+              src="/logo.PNG"
+              width={60}
+              height={60}
+              alt='leo-logo'
+            />
           </motion.div>
 
           {/* Sparkles */}

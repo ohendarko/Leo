@@ -75,9 +75,9 @@ export function VerdictReport({ verdict, onReset }: VerdictReportProps) {
   return (
     <div className="space-y-6">
       {/* Header Card with Survival Score */}
-      <Card className="p-8 bg-card/95 backdrop-blur-sm border-primary/30 shadow-2xl animate-fade-in">
+      <Card className="p-8 bg-cream backdrop-blur-sm border-primary/30 shadow-2xl animate-fade-in">
         <div className="text-center space-y-6">
-          <h2 className="text-3xl font-bold text-gold font-cinzel">
+          <h2 className="text-3xl font-bold text-gold-100 font-cinzel">
             Leo's Verdict
           </h2>
 
@@ -152,10 +152,10 @@ export function VerdictReport({ verdict, onReset }: VerdictReportProps) {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Critical Risks */}
         <Card className="p-6 bg-red-950/30 border-red-500/30">
-          <h3 className="text-xl font-bold text-red-400 mb-4 font-cinzel">
+          <h3 className="text-xl font-bold text-red-200 mb-4 font-cinzel">
             🔴 Critical Risks
           </h3>
-          <ul className="space-y-2 text-sm text-red-200">
+          <ul className="space-y-2 text-sm text-red-50">
             {verdict.criticalRisks.map((risk, idx) => (
               <li key={idx} className="leading-relaxed">
                 • {risk}
@@ -166,10 +166,10 @@ export function VerdictReport({ verdict, onReset }: VerdictReportProps) {
 
         {/* Key Strengths */}
         <Card className="p-6 bg-green-950/30 border-green-500/30">
-          <h3 className="text-xl font-bold text-green-400 mb-4 font-cinzel">
+          <h3 className="text-xl font-bold text-green-200 mb-4 font-cinzel">
             🟢 Key Strengths
           </h3>
-          <ul className="space-y-2 text-sm text-green-200">
+          <ul className="space-y-2 text-sm text-green-50">
             {verdict.keyStrengths.map((strength, idx) => (
               <li key={idx} className="leading-relaxed">
                 • {strength}
@@ -180,10 +180,10 @@ export function VerdictReport({ verdict, onReset }: VerdictReportProps) {
 
         {/* Recommendations */}
         <Card className="p-6 bg-blue-950/30 border-blue-500/30">
-          <h3 className="text-xl font-bold text-blue-400 mb-4 font-cinzel">
+          <h3 className="text-xl font-bold text-blue-200 mb-4 font-cinzel">
             💡 Top Actions
           </h3>
-          <ul className="space-y-2 text-sm text-blue-200">
+          <ul className="space-y-2 text-sm text-blue-50">
             {verdict.actionableRecommendations.map((rec, idx) => (
               <li key={idx} className="leading-relaxed">
                 • {rec}
@@ -195,12 +195,12 @@ export function VerdictReport({ verdict, onReset }: VerdictReportProps) {
 
       {/* Extended Thinking */}
       {verdict.thinkingProcess && (
-        <Card className="p-6 bg-card/95 backdrop-blur-sm border-primary/30">
+        <Card className="p-6 bg-light-cream/80 backdrop-blur-sm border-primary/30">
           <Button
             variant="outline"
             size="sm"
             onClick={() => setShowThinking(!showThinking)}
-            className="w-full border-primary/40 text-primary hover:bg-primary/10"
+            className="w-full border-primary/40 text-gray-50 hover:bg-primary/10"
           >
             <Lightbulb className="mr-2 h-4 w-4" />
             {showThinking ? 'Hide' : 'Show'} Leo's Deep Analysis Reasoning
@@ -222,9 +222,9 @@ export function VerdictReport({ verdict, onReset }: VerdictReportProps) {
       )}
 
       {/* Full Report */}
-      <Card className="p-8 bg-card/95 backdrop-blur-sm border-primary/30">
+      <Card className="p-8 bg-light-cream/80 backdrop-blur-sm border-primary/30">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4">
-          <h3 className="text-2xl font-bold text-gold font-cinzel">
+          <h3 className="text-2xl font-bold text-gray-900 font-cinzel">
             Full Validation Report
           </h3>
           <div className="flex flex-wrap gap-2">
@@ -232,7 +232,7 @@ export function VerdictReport({ verdict, onReset }: VerdictReportProps) {
               onClick={downloadAsMarkdown}
               variant="outline"
               size="sm"
-              className="border-primary text-primary hover:bg-primary/20"
+              className="border-primary text-gray-200 hover:bg-primary/20"
             >
               <FileText className="mr-2 h-4 w-4" />
               Markdown
@@ -241,7 +241,7 @@ export function VerdictReport({ verdict, onReset }: VerdictReportProps) {
               onClick={downloadAsText}
               variant="outline"
               size="sm"
-              className="border-primary text-primary hover:bg-primary/20"
+              className="border-primary text-gray-200 hover:bg-primary/20"
             >
               <FileDown className="mr-2 h-4 w-4" />
               Text
@@ -249,7 +249,7 @@ export function VerdictReport({ verdict, onReset }: VerdictReportProps) {
           </div>
         </div>
 
-        <div className="prose prose-invert prose-gold max-w-none">
+        <div className="prose prose-invert prose-gold text-gray-900 max-w-none">
           <ReactMarkdown remarkPlugins={[remarkGfm]}>
             {verdict.reportMarkdown}
           </ReactMarkdown>
@@ -262,7 +262,7 @@ export function VerdictReport({ verdict, onReset }: VerdictReportProps) {
           onClick={onReset}
           variant="outline"
           size="lg"
-          className="border-primary text-primary hover:bg-primary/20"
+          className="border-primary text-primary bg-light-cream/80 hover:bg-primary/80"
         >
           <RotateCcw className="mr-2 h-4 w-4" />
           Start New Validation

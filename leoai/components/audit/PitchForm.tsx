@@ -195,7 +195,7 @@ export function PitchForm({ onSubmit, isLoading }: PitchFormProps) {
             type="submit"
             disabled={isLoading}
             size="lg"
-            className="min-w-[200px] bg-primary hover:bg-primary/80 text-gray-900 border border-gold/50"
+            className="min-w-[200px] bg-primary hover:bg-primary/80 text-gray-100 border border-gold/50"
           >
             {isLoading ? 'Analyzing...' : 'Submit Pitch'}
           </Button>
