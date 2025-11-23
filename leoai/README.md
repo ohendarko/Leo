@@ -43,7 +43,7 @@ The front-end is optimized for a premium user experience and visual impact.
 
 This is a full-stack application built for performance and modern development practices.
 
-* **AI Model:** Anthropic Claude **3.5 Sonnet** (via `@anthropic-ai/sdk`)
+* **AI Model:** Anthropic Claude **4 Sonnet** (via `@anthropic-ai/sdk`)
 * **Framework:** **Next.js App Router**
 * **Language:** **TypeScript**
 * **Styling:** Tailwind CSS
