@@ -57,7 +57,7 @@ export const metadata: Metadata = {
         url: "https://leo-phi-olive.vercel.app/leologo.png", // create one with your name/photo
         width: 600,
         height: 600,
-        alt: "Kwadwo Ohene Darko Portfolio",
+        alt: "Leo Digital Startup Analyst",
       },
     ],
     locale: "en_US",
