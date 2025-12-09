@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Inter, Cinzel } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
+import { Analytics } from "@vercel/analytics/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -54,7 +55,7 @@ export const metadata: Metadata = {
     siteName: "Leo AI",
     images: [
       {
-        url: "https://leo-phi-olive.vercel.app/leologo.png", // create one with your name/photo
+        url: "https://leo-phi-olive.vercel.app/leologo.png",
         width: 600,
         height: 600,
         alt: "Leo Digital Startup Analyst",
@@ -89,6 +90,7 @@ export default function RootLayout({
         {children}
         <Toaster />
         <Sonner />
+        <Analytics />
       </body>
     </html>
   );
