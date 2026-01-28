@@ -28,7 +28,7 @@ const Landing = () => {
             
             {/* Headline */}
             <h1 className="font-cinzel font-bold leading-[1.1] mb-8 uppercase" style={{ fontSize: 'clamp(34px, 5vw, 94px)' }}>
-              <span className="text-white">95% of digital health solutions </span>
+              <span className="text-white">95% of digital health  </span>
               <span className="text-primary">fail</span>
               <span className="text-white">.</span>
               <br />
